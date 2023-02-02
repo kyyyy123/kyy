@@ -1,0 +1,390 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agus FROST">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+
+    <title>Tetap Semangat Ya!!</title>
+
+    <!-- 
+    This code was made by Agus FROST
+    Instagram: @agusfrost26
+    TikTok: @agusfrost
+    Youtube: Agus FROST
+    -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #AD563C, #A92C5C, #1B81A5, #19987B);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background-color: #101010;
+            font-family: 'Quicksand', sans-serif;
+            padding: 25px
+        }
+
+        body::before {
+            content: "\00A9  Agus FROST";
+            color: white;
+            opacity: .5;
+            font-size: 5px;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @keyframes leaves {
+            0% {
+                transform: scale(1.0);
+            }
+
+            100% {
+                transform: scale(.85);
+            }
+        }
+
+        #lope,
+        .image .degdeg {
+            animation: leaves 1s ease-in-out infinite alternate;
+            -webkit-animation: leaves 1s ease-in-out infinite alternate;
+        }
+
+        .button:hover {
+            transform: scale(1.2);
+        }
+
+        .foto {
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 150px;
+        }
+
+        .foto>* {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            font-size: 18px;
+            color: white
+        }
+
+        .foto img {
+            border-radius: 50%;
+            transition: all .5s ease;
+        }
+
+        .foto img:first-child {
+            z-index: 1
+        }
+
+        .contTom {
+            margin: 0;
+            margin-left: -500%;
+            transition: all .3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none
+        }
+
+        .icon {
+            flex-shrink: 0;
+            display: inline-block;
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        .icon.whatsapp {
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23fefefe'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'/><path d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'/></g></svg>")
+        }
+
+        .button {
+            transition: all .3s ease;
+            display: inline-flex;
+            align-items: center;
+            margin: 12px 12px 12px 0;
+            padding: 10px 15px;
+            outline: 0;
+            border: 0;
+            border-radius: 10px;
+            line-height: 20px;
+            color: #fefefe;
+            background: rgba(0, 0, 0, .50);
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%
+        }
+
+        .kolomteks {
+            position: relative;
+            padding: 16px 30px 16px 30px;
+            background: rgba(0, 0, 0, .50);
+            color: white;
+            font-size: .90rem;
+            line-height: 1.6em;
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        .kolomteks p {
+            text-align: center;
+        }
+
+        .kolomteks::after {
+            content: '\201D';
+            position: absolute;
+            left: 14px;
+            top: 18px;
+            font-size: 50px;
+            min-width: 15px;
+            text-align: center
+        }
+    </style>
+    <script>
+        function nonFt() {
+            document.getElementById('foto').style.display = "none";
+        }
+
+        function showFt() {
+            document.getElementById('foto').style.display = "block";
+        }
+
+        function nonDiv() {
+            document.getElementById('Content').style.display = "none";
+        }
+
+        function showDiv() {
+            document.getElementById('Content').style.display = "block";
+        }
+
+        function nonKol() {
+            document.getElementById('koteks').style.display = "none";
+        }
+
+        function showKol() {
+            document.getElementById('koteks').style.display = "block";
+        }
+
+        function trm() {
+            document.getElementById('trm').style.margin = "0";
+        }
+
+        function whs() {
+            document.getElementById('whs').style.margin = "0";
+            document.getElementById('trm').style.display = "none";
+        }
+
+        function fotoKt() {
+            document.getElementById('ftKm').style.margin = "0 110px 0 0";
+            document.getElementById('ftAk').style.opacity = "1";
+            document.getElementById('ftAk').style.margin = "0 0 0 60px";
+            var e1 = document.getElementById('ftKm');
+            e1.classList.add("degdeg");
+            var e2 = document.getElementById('ftAk');
+            e2.classList.add("degdeg");
+        }
+
+        function ketik() {
+            if (a < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(a);
+                a++;
+                setTimeout(ketik, 100);
+            }
+            if (a == text.length) {
+                ketikk();
+            }
+        }
+
+        function ketikk() {
+            if (i < text2.length) {
+                document.getElementById("text2").innerHTML += text2.charAt(i);
+                i++;
+                setTimeout(ketikk, 200);
+            }
+            if (i == text2.length) {
+                ketikkk();
+            }
+        }
+
+        function ketikkk() {
+            if (u < text3.length) {
+                document.getElementById("text3").innerHTML += text3.charAt(u);
+                u++;
+                setTimeout(ketikkk, 250);
+            }
+            if (u == text3.length) {
+                ketikkkk();
+            }
+        }
+
+        function ketikkkk() {
+            if (e < text4.length) {
+                document.getElementById("text4").innerHTML += text4.charAt(e);
+                e++;
+                setTimeout(ketikkkk, 250);
+            }
+            if (e == text4.length) {
+                trm();
+            }
+        }
+
+        function finish() {
+            if (e == text4.length) {
+                document.getElementById('sp1').style.display = "none";
+                document.getElementById('sp2').style.display = "block";
+            }
+            if (o < text5.length) {
+                document.getElementById("text5").innerHTML += text5.charAt(o);
+                o++;
+                setTimeout(finish, 100);
+            }
+            if (o == text5.length) {
+                whs();
+                nonKol();
+                fotoKt();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="foto" class="foto" style="display:none">
+        <div class="image">
+            <!-- Foto Kamu --><img id="ftKm" src="https://i.postimg.cc/y6jrvMxv/FB-IMG-16357374354028937.jpg"
+                width="100px" height="100px" />
+            <!-- Foto Aku --><img id="ftAk" style="opacity:0;position:absolute;"
+                src="https://i.postimg.cc/fTbqF80Z/FB-IMG-16357374385764900.jpg" width="100px" height="100px" /></div>
+        <span id="sp1"><b id="namamu"></b>
+            <div id="lope" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div>
+        </span>
+        <div id="sp2" style="display:none;"><span id="text5"></span></div>
+    </div>
+
+    <div id='Content' style="display:none">
+        <div id='koteks' class="kolomteks">
+            <p id="text"></p>
+            <p id="text2"></p>
+            <p id="text3"></p>
+            <p id="text4" style="font-weight:700;font-size: 12px"></p>
+        </div>
+        <div id="trm" class="contTom"><a style="margin:12px 12px 12px 0;" class='button'
+                onClick="finish();"></i>Lanjut</a></div>
+        <div id="whs" class="contTom"><a class='button whatsapp' onClick='bukaWa();'><i
+                    class='icon whatsapp'></i>Kirim</a></div>
+    </div>
+
+    <!-- Teks Mengetik dan WhatsApp -->
+    <script>
+        var a = 0,
+            text;
+        text = "Untukmu yang sedang mengejar impian dan cita-cita...   "
+        var i = 0,
+            text2;
+        text2 = "Semangat, ya Praktek Kerja Lapangannya! Jangan lupa jaga kesehatan☺️."
+        var u = 0,
+            text3;
+        text3 =
+            "Lupakan semua hal buruk hari ini. Bersabarlah, semesta sedang mengatur cerita terbaik untukmu.         "
+        var e = 0,
+            text4;
+        var o = 0,
+            text5;
+        text5 = "Keep spirit, "
+
+        //Opsi WhatsApp
+        function bukaWa() {
+            window.location = "https://api.whatsapp.com/send?phone=&text=Hai, namaku: " + "*" + nama + "*" + "%0A%0A" +
+                "*" + nama + "*" + " kenal sama kamu " + "*" + persen + "*" + "%0A%0A" + "*" + nama + "*" +
+                " sudah bacain semuanya ko. Makasih yaaa ><" + "%0A%0A" + "*" + "Dikirim:" + "*" + "%20" + dateTime;
+        }
+    </script>
+
+    <script type="text/javascript">
+        var author = 'Aku';
+        var today = new Date();
+        var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + '.';
+        var dateTime = date;
+        const swals = Swal.mixin({
+            cancelButtonColor: '#909090',
+            confirmButtonColor: '#00B487',
+            allowOutsideClick: false,
+        });
+        async function mulai() {
+            var {
+                value: nama
+            } = await swals.fire({
+                title: 'Nama kamu?',
+                input: 'text',
+                confirmButtonText: 'Lanjut',
+                showCancelButton: false,
+            });
+            if (nama) {
+                window.nama = nama;
+                text5 = text5 + window.nama + "!      ";
+                var {
+                    value: persen
+                } = await swals.fire({
+                    title: nama + ' kenal ' + author + ' kan?',
+                    input: 'range',
+                    inputLabel: 'Kenal ' + author + ' berapa persen?',
+                    inputAttributes: {
+                        min: 60,
+                        max: 100,
+                    },
+                    inputValue: 70
+                });
+                if (persen) {
+                    window.persen = persen + '%25';
+                    document.getElementById("namamu").innerHTML = "Halo, " + nama + "!";
+                    text4 = "Dari: " + author + ", Untuk: " + nama + ".";
+                    await swals.fire(`Sekarang lihat ini ya &#10084;&#65039;`);
+                    ketik();
+                    showDiv();
+                    showFt();
+                }
+            } else {
+                await swals.fire('Nama tidak boleh kosong, ya!');
+                mulai();
+            }
+        }
+        //funct Mulai
+        mulai()
+    </script>
+</body>
+
+</html>
